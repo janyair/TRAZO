@@ -342,6 +342,7 @@ h3{font-size:clamp(22px,2.2vw,28px);line-height:1.14;letter-spacing:-.025em}
 .plan-price b{font-size:50px;font-weight:700;letter-spacing:-.05em;font-variant-numeric:tabular-nums;line-height:1.05}
 .plan-price small{font-size:15px;color:var(--gray);font-weight:500}
 .plan-alt{font-size:14px;color:var(--gray);margin:4px 0 24px;min-height:1.5em;font-variant-numeric:tabular-nums}
+.plan-pay{margin-top:-20px;color:var(--ink);font-weight:600}.plan-dark .plan-pay{color:var(--chalk)}
 .plan .pill{align-self:flex-start}
 .plan ul{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line)}
 .plan-dark ul,.plan-dark li{border-color:#2c2c2e}
@@ -742,7 +743,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
         <a class="pill pill-accent pill-lg" href="#diagnostico">Haz el diagnóstico exprés</a>
         <a class="link-chev" href="#precios">Ver precios <svg><use href="#chev"/></svg></a>
       </div>
-      <p class="hero-note">La primera visita es sin costo.</p>
+      <p class="hero-note">La primera visita es gratis: 40 minutos en tu negocio, sin compromiso.</p>
     </div>
     <p class="hero-line" id="heroLine">La primera línea se dibuja a mano, en tu negocio, frente a ti.</p>
     <div class="scroll-cue" aria-hidden="true"><span></span></div>
@@ -1029,6 +1030,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
         <h3>Diagnóstico y Marca Esencial</h3>
         <p class="plan-price"><b data-base="4500">$4,500</b><small data-sfx>+ IVA</small></p>
         <p class="plan-alt" data-alt="4500"></p>
+        <p class="plan-alt plan-pay">o 3 pagos de $1,740, uno por visita</p>
         <a class="pill pill-accent" href="#diagnostico">Empezar por aquí</a>
         <ul>
           <li>Diagnóstico del negocio por escrito</li><li>Propuesta de valor</li><li>Logotipo y variantes de uso</li><li>Paleta de colores y tipografías</li><li>Manual básico de marca</li><li>Expediente impreso y carpeta digital</li>
@@ -1040,6 +1042,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
         <h3>Marca y Crecimiento</h3>
         <p class="plan-price"><b data-base="9000">$9,000</b><small data-sfx>+ IVA</small></p>
         <p class="plan-alt" data-alt="9000"></p>
+        <p class="plan-alt plan-pay">Se paga visita por visita</p>
         <a class="pill pill-light" href="#diagnostico">Quiero este</a>
         <ul>
           <li>Todo lo del paquete Esencial</li><li>Estrategia de mercadotecnia</li><li>Plan de redes para 90 días</li><li>Análisis de datos de tu negocio con IA</li><li>Indicadores con punto de partida</li>
@@ -1088,8 +1091,8 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
         <input type="range" id="months" min="0" max="12" value="3">
       </div>
       <div class="calc-res" aria-live="polite">
-        <div class="cr-row"><span>Al firmar, 50 %</span><b id="rSign">$2,610.00</b></div>
-        <div class="cr-row"><span>Al recibir el Expediente</span><b id="rDeliver">$2,610.00</b></div>
+        <div class="cr-row"><span id="rPayL">3 pagos, uno por visita</span><b id="rSign">$1,740.00 c/u</b></div>
+        <div class="cr-row off" id="rDeliverRow"><span>Al recibir el Expediente</span><b id="rDeliver"></b></div>
         <div class="cr-row"><span id="rMonthsL">Acompañamiento, 3 meses</span><b id="rMonth">$3,248.00 al mes</b></div>
         <div class="cr-total"><small>Total con IVA</small><b id="rTotal">$14,964.00</b></div>
         <a class="pill pill-light" id="calcWa" href="https://wa.me/524411224883" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Enviar este estimado</a>
@@ -1106,7 +1109,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
     <p class="lead">Todo va por escrito en un contrato de servicios, con una hoja al inicio que lo resume en palabras simples.</p>
   </div>
   <div class="g-grid">
-    <div class="g rv"><svg class="gi" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 5V27"/><path class="f" d="M16 5A11 11 0 0 0 16 27Z"/></svg><b>Pagas en dos partes.</b><p>La mitad al firmar y la otra mitad cuando recibes el Expediente.</p></div>
+    <div class="g rv"><svg class="gi" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 5V27"/><path class="f" d="M16 5A11 11 0 0 0 16 27Z"/></svg><b>Pagas visita por visita.</b><p>El Esencial se paga en 3 pagos de $1,740, uno en cada visita. En Marca y Crecimiento el calendario de pagos va por escrito en tu propuesta.</p></div>
     <div class="g rv" style="--d:.05s"><svg class="gi" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="7" width="22" height="20" rx="3"/><path d="M5 13H27M11 4V9M21 4V9M12 20L15 23L21 17"/></svg><b>Si cancelas, pagas lo trabajado.</b><p>Avisas con 15 días y pagas solo las etapas terminadas.</p></div>
     <div class="g rv" style="--d:.1s"><svg class="gi" viewBox="0 0 32 32" aria-hidden="true"><path d="M26 16A10 10 0 0 1 8.9 23.1M6 16A10 10 0 0 1 23.1 8.9"/><path d="M23.6 4V9.4H18.2M8.4 28V22.6H13.8"/></svg><b>Revisas y pides cambios.</b><p>Cada entrega incluye rondas de revisión definidas desde el inicio.</p></div>
     <div class="g rv" style="--d:.15s"><svg class="gi" viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="16" r="6"/><path d="M17 16H28M24 16V21M28 16V20"/></svg><b>Tu logotipo es tuyo.</b><p>Al terminar de pagar, los derechos del diseño pasan a ti.</p></div>
@@ -1179,10 +1182,10 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
     <h2 id="f-t">Lo que casi todos preguntan.</h2>
   </div>
   <div class="faq-list">
-    <details><summary>¿La primera visita tiene costo?<i></i></summary><div class="ans"><p>No. En la primera visita conocemos tu negocio y te dejamos la hoja del primer trazo. Si decides contratar, te mandamos la propuesta de una página con el precio final.</p></div></details>
+    <details><summary>¿La primera visita tiene costo?<i></i></summary><div class="ans"><p>No, es gratis. Son 40 minutos en tu negocio, sin compromiso: conocemos tu negocio y te dejamos la hoja del primer trazo. Si decides contratar, te mandamos la propuesta de una página con el precio final.</p></div></details>
     <details><summary>¿Qué pasa si no me gusta el logotipo?<i></i></summary><div class="ans"><p>Cada paquete incluye rondas de revisión. En una ronda nos mandas todos tus cambios juntos y los hacemos. Si después quieres más cambios, se cotizan aparte y solo se hacen si tú los apruebas.</p></div></details>
     <details><summary>¿El logotipo es mío?<i></i></summary><div class="ans"><p>Sí. Cuando terminas de pagar, los derechos del diseño pasan a ti, como obra por encargo según la Ley Federal del Derecho de Autor. Podemos mostrarlo en nuestro portafolio, salvo que marques en el contrato que no quieres.</p></div></details>
-    <details><summary>¿Y si quiero cancelar?<i></i></summary><div class="ans"><p>Avisas por escrito con 15 días de anticipación y pagas solo las etapas ya trabajadas. Si el diagnóstico ya empezó, el anticipo no se devuelve, porque cubre ese trabajo.</p></div></details>
+    <details><summary>¿Y si quiero cancelar?<i></i></summary><div class="ans"><p>Avisas por escrito con 15 días de anticipación y pagas solo las etapas ya trabajadas. Si el diagnóstico ya empezó, el primer pago no se devuelve, porque cubre ese trabajo.</p></div></details>
     <details><summary>¿Me dan factura?<i></i></summary><div class="ans"><p>Sí, con el IVA del 16 % desglosado. Si tu negocio es persona moral, el contrato ya prevé las retenciones que correspondan.</p></div></details>
     <details><summary>¿Van hasta mi comunidad?<i></i></summary><div class="ans"><p>Las visitas a las cabeceras de Pinal de Amoles y Jalpan de Serra están incluidas. Para otras comunidades te decimos el costo del traslado antes de ir, y solo vamos si estás de acuerdo.</p></div></details>
     <details><summary>¿Usan inteligencia artificial?<i></i></summary><div class="ans"><p>Sí, como apoyo para analizar datos, hacer borradores y explorar ideas. Todo lo que entregamos lo revisa y lo decide una persona, que responde por ello en el contrato.</p></div></details>
@@ -1648,9 +1651,9 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
     months.style.setProperty('--v', (m / 12 * 100) + '%');
     const mTxt = m === 0 ? 'Sin acompañamiento' : m === 1 ? '1 mes' : `${m} meses`;
     monthsOut.textContent = mTxt;
-    const half = pk * IVA / 2;
-    rSign.textContent = money(half, 2);
-    rDeliver.textContent = money(half, 2);
+    // visita por visita: el Esencial en 3 pagos iguales; Crecimiento con su calendario en la propuesta
+    if (pk === 4500) { $('#rPayL').textContent = '3 pagos, uno por visita'; rSign.textContent = `${money(pk * IVA / 3, 2)} c/u`; }
+    else { $('#rPayL').textContent = 'Se paga visita por visita'; rSign.textContent = 'Calendario en tu propuesta'; }
     rMonthsL.textContent = m ? `Acompañamiento, ${mTxt}` : 'Acompañamiento';
     rMonth.textContent = m ? `${money(2800 * IVA, 2)} al mes` : 'No incluido';
     const total = pk * IVA + m * 2800 * IVA;
@@ -5713,17 +5716,17 @@ void main() {
     { k: ['cuanto tarda', 'cuanto tardan', 'tiempo', 'tarda', 'dias', 'cuando entregan', 'rapido', 'semanas', 'cuanto se tardan', 'duracion'],
       a: 'El paquete Esencial tarda 20 días hábiles y el de Crecimiento, 30. Tú tienes 5 días hábiles para revisar cada entrega; los cambios se hacen dentro de las rondas incluidas.' },
     { k: ['pago', 'pagar', 'pagos', 'anticipo', 'transferencia', 'efectivo', 'tarjeta', 'meses sin intereses', 'parcialidades', 'abonos', 'como se paga', 'forma de pago'],
-      a: 'Los paquetes se pagan en dos partes: la mitad al firmar y la otra mitad cuando recibes el Expediente. Se paga en efectivo, con recibo, o por transferencia. El acompañamiento se paga dentro de los primeros cinco días de cada mes.' },
+      a: 'Puedes pagar visita por visita. El Diagnóstico y Marca Esencial se paga en 3 pagos de $1,740, uno en cada visita. En Marca y Crecimiento el calendario de pagos por visita va por escrito en tu propuesta. Se paga en efectivo, con recibo, o por transferencia. El acompañamiento se paga dentro de los primeros cinco días de cada mes.' },
     { k: ['factura', 'facturar', 'facturas', 'iva', 'rfc', 'deducible', 'persona moral'],
       a: 'Sí hay factura. Los precios de la página son antes de IVA; con el 16 % quedan en $5,220 el Esencial, $10,440 el de Crecimiento y $3,248 al mes el acompañamiento. Si tu negocio es persona moral, se aplican las retenciones que correspondan.' },
     { k: ['primera visita', 'gratis', 'sin costo', 'cita', 'agendar', 'agenda', 'visita', 'reunion', 'conocernos', 'platica', 'platicar', 'hoja del primer trazo'],
-      a: 'La primera visita es sin costo. Conocemos tu negocio, platicamos contigo y te dejamos la hoja del primer trazo. Si decides contratar, te mandamos la propuesta de una página con el precio final. Para agendarla, escríbele a Jan por WhatsApp al 441 122 4883.' },
+      a: 'La primera visita es gratis: 40 minutos en tu negocio, sin compromiso. Conocemos tu negocio, platicamos contigo y te dejamos la hoja del primer trazo. Si decides contratar, te mandamos la propuesta de una página con el precio final. Para agendarla, escríbele a Jan por WhatsApp al 441 122 4883.' },
     { k: ['donde', 'zona', 'comunidad', 'jalpan', 'pinal', 'landa', 'arroyo seco', 'san joaquin', 'ahuacatlan', 'traslado', 'vienen', 'van hasta', 'ubicacion', 'queretaro', 'lejos', 'municipio'],
       a: 'TRAZO trabaja desde Ahuacatlán de Guadalupe, en Pinal de Amoles. Las visitas a las cabeceras de Pinal de Amoles y Jalpan de Serra ya están incluidas en el precio. Para otras comunidades te decimos el costo del traslado antes de ir, y solo vamos si estás de acuerdo.' },
     { k: ['cambios', 'cambio', 'revision', 'revisiones', 'rondas', 'ronda', 'no me gusta', 'no me gusto', 'modificar', 'corregir', 'ajustes'],
       a: 'Cada entrega trae rondas de revisión: 2 sobre la propuesta de logotipo en el Esencial y 2 por entregable en Crecimiento. En una ronda nos mandas todos tus cambios juntos y por escrito. Si después quieres más cambios, se cotizan aparte y solo se hacen si los apruebas.' },
     { k: ['cancelar', 'cancelo', 'cancelacion', 'reembolso', 'devolucion', 'devuelven', 'arrepiento', 'salirme', 'terminar el contrato'],
-      a: 'Cualquiera de las dos partes puede terminar el contrato avisando por escrito con 15 días de anticipación, y pagas solo las etapas ya trabajadas. Si el diagnóstico ya empezó, el anticipo no se devuelve, porque cubre ese trabajo.' },
+      a: 'Cualquiera de las dos partes puede terminar el contrato avisando por escrito con 15 días de anticipación, y pagas solo las etapas ya trabajadas. Si el diagnóstico ya empezó, el primer pago no se devuelve, porque cubre ese trabajo.' },
     { k: ['es mio', 'derechos', 'propiedad', 'me pertenece', 'portafolio', 'editables', 'vector'],
       a: 'El logotipo es tuyo cuando terminas de pagar. TRAZO puede mostrarlo en su portafolio, salvo que marques en el contrato que no quieres. Los archivos finales van en la carpeta digital.' },
     { k: ['impi', 'registro', 'registrar', 'marca registrada', 'patente'],
