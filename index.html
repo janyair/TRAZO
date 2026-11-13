@@ -124,7 +124,8 @@ h3{font-size:clamp(22px,2.2vw,28px);line-height:1.14;letter-spacing:-.025em}
 .hero-eyebrow{font-size:15px}
 .hero-sub{font-size:clamp(19px,1.7vw,23px);line-height:1.42;color:var(--gray);letter-spacing:-.018em;margin-top:22px;max-width:30em}
 .hero-cta{display:flex;align-items:center;gap:26px;margin-top:34px;flex-wrap:wrap}
-.hero-note{margin-top:18px;font-size:14px;color:var(--gray)}
+.hero-note{margin-top:18px;font-size:18px;font-weight:600;color:var(--ink)}.hero-note b{color:var(--accent)}
+.free-note{margin-top:14px;font-size:18px;font-weight:600;color:var(--ink)}.free-note b{color:var(--accent)}
 .split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
 .split .w>span{display:inline-block}
 .js .split .w>span{transform:translateY(108%);transition:transform 1.1s var(--ease) calc(var(--i)*55ms + .3s)}
@@ -743,7 +744,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
         <a class="pill pill-accent pill-lg" href="#diagnostico">Haz el diagnóstico exprés</a>
         <a class="link-chev" href="#precios">Ver precios <svg><use href="#chev"/></svg></a>
       </div>
-      <p class="hero-note">La primera visita es gratis: 40 minutos en tu negocio, sin compromiso.</p>
+      <p class="hero-note">La primera visita es <b>gratis</b>: 40 minutos en tu negocio, sin compromiso.</p>
     </div>
     <p class="hero-line" id="heroLine">La primera línea se dibuja a mano, en tu negocio, frente a ti.</p>
     <div class="scroll-cue" aria-hidden="true"><span></span></div>
@@ -1020,6 +1021,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
       <p class="eyebrow">Precios</p>
       <h2 id="p-t">Precios claros desde el principio.</h2>
       <p class="lead">Una agencia de Querétaro capital cobra entre $8,000 y $25,000 por una identidad básica. Aquí está lo que cuesta TRAZO, antes y después de IVA.</p>
+      <p class="free-note">La primera visita es <b>gratis</b>: 40 minutos en tu negocio, sin compromiso.</p>
       <div class="seg-iva" role="group" aria-label="Mostrar precios">
         <button type="button" class="on" data-iva="0" aria-pressed="true">Sin IVA</button><button type="button" data-iva="1" aria-pressed="false">Con IVA</button><span class="seg-knob"></span>
       </div>
@@ -1156,7 +1158,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
     <div class="sec-head center rv">
       <p class="eyebrow">Diagnóstico exprés</p>
       <h2 id="dg-t">Cinco preguntas.<br>Un minuto.</h2>
-      <p class="lead">Te decimos por dónde empezaríamos y te dejamos el mensaje listo para agendar tu primera visita, sin costo.</p>
+      <p class="lead">Te decimos por dónde empezaríamos y te dejamos el mensaje listo para agendar tu primera visita gratis.</p>
     </div>
     <div class="quiz rv" id="quiz">
       <div class="quiz-bar"><i id="quizBar"></i></div>
@@ -1202,7 +1204,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
   <div class="wrap center">
     <svg class="cierre-iso" id="cierreIso" viewBox="-10 -10 187 276" aria-hidden="true"><path pathLength="1" d="M0 0H37V97L167 200V256H57L91 223H134L37 144V223H0Z"/></svg>
     <h2 id="c-t" class="rv">Empecemos con una hoja en blanco.</h2>
-    <p class="lead rv">Escríbenos por WhatsApp y agendamos tu primera visita.</p>
+    <p class="lead rv">Escríbenos por WhatsApp y agendamos tu primera visita <b>gratis</b>.</p>
     <div class="cierre-cta rv">
       <a class="pill pill-light pill-lg" href="https://wa.me/524411224883?text=Hola%2C%20quiero%20agendar%20una%20primera%20visita%20de%20TRAZO." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Escribir por WhatsApp</a>
       <button type="button" class="link-chev as-btn light" id="copyNum">441 122 4883 · copiar <svg><use href="#chev"/></svg></button>
@@ -1766,7 +1768,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border:0;border-radiu
       <p class="res-price">${P.price} · ${P.time}</p>
       <p class="res-why">${rec.why}</p>
       ${rec.notes.map(n => `<p class="res-note">${n}</p>`).join('')}
-      <p class="res-h">¿Cuándo te acomoda la primera visita? Es sin costo.</p>
+      <p class="res-h">¿Cuándo te acomoda la primera visita? Es gratis.</p>
       <div class="chips" role="group" aria-label="Horario preferido">${DAYS.map(d => `<button type="button" data-d="${d[0]}" class="${dayPick === d[0] ? 'sel' : ''}">${d[1]}</button>`).join('')}</div>
       <p class="res-h"><label for="qName">¿Cómo te llamas? <span style="color:var(--gray);font-weight:500">Opcional</span></label></p>
       <input type="text" id="qName" autocomplete="given-name" maxlength="40" value="${nameVal.replace(/"/g, '&quot;')}">
